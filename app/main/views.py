@@ -18,12 +18,12 @@ def index():
     title = 'welcome to news updates'
     return render_template('index.html', title=title, general=general_sources, sports=sports_sources, health=health_sources, technology = technology_sources)
     
-# @main.route('/articles/<id>')
-# def articles(id):
+@main.route('/articles/<id>')
+def articles(id):
 
-#     '''
-#     View movie page function that returns the movie details page and its data
-#     '''
-#     title = 'welcome to news updates'
-#     articles = get_articles(id)
-#     return render_template('articles.html',title=title,id = id, articles=articles)
+    '''
+    View movie page function that returns the movie details page and its data
+    '''
+    title = 'welcome to news updates'
+    articles = get_articles(id)
+    return render_template('articles.html',title=title,id = id, articles=articles)
